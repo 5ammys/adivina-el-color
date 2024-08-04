@@ -1,0 +1,21 @@
+body{
+  background-color: black;
+  color: white;
+}
+#menu,#game{
+  display: none;
+  
+}
+.colorsTable{
+  display: flex;
+}
+
+.color-box{
+  width: 75px;
+  height: 75px;
+  margin: 5px;
+  
+}
+.color-box:hover{
+  border: 2px solid cyan;
+}
