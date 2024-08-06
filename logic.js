@@ -23,8 +23,19 @@ class ColorGame{
       for (let i = 0; i < lengthColors; i++) {
         colors.push(this.randomColorEasy());
       }
+    }else{
+      let targetColor = this.randomColorEasy();
+      let randomPosition = Math.floor(Math.random()*6);
+      for (let i = 0; i < lengthColors; i++) {
+        if(i==randomPosition){
+          colors.push(targetColor)
+        }else{
+          colors.push(this.randomColorHard(targetColor));
+        }
+        
+      }
     }
-    
+    console.log(colors)
     return colors;
   }
 
@@ -40,8 +51,21 @@ class ColorGame{
     return (r+g+b);
   }
 
-  randomColorHard(){
+  randomColorHard(targetColor){
+    let result = [];
+    for (let i = 0; i < targetColor.length; i += 2) {
+        result.push(targetColor.substr(i, 2));
+    }
     
+    let r = Math.floor(Math.random() * parseInt(result[0],16)).toString(16);
+    let g = Math.floor(Math.random() * parseInt(result[1],16)).toString(16);
+    let b = Math.floor(Math.random() * parseInt(result[2],16)).toString(16);
+
+    r=this.depureColor(r);
+    g=this.depureColor(g);
+    b=this.depureColor(b);
+
+    return (r+g+b);
   }
 
   depureColor(str){
@@ -50,7 +74,7 @@ class ColorGame{
     }
     return str;
   }
-  
+
   targetColor(colors){
     let colorsLength = colors.length;
     let target = colors[Math.floor(colorsLength*Math.random())];
@@ -64,9 +88,26 @@ class ColorGame{
       const colorBox = document.createElement("div");
       colorBox.className = "color-box";
       colorBox.style.backgroundColor = `#${color}`;
-
+      colorBox.addEventListener('click',()=>{
+        if(color==pickedColor){
+          
+        }else{
+          console.log("es incorrecto")
+        }
+      })
       this.tableElement.appendChild(colorBox)
     })
+  }
+
+  restart(){
+    location.reload();
+    this.game.style.display='block';
+  }
+
+  returnToMenu(){
+    location.reload();
+    this.game.style.display='none';
+    this.menu.style.display='block';
   }
 }
 

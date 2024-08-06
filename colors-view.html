@@ -15,10 +15,10 @@
     <button id="hard" onclick="game.startGame('hard')">Dificil</button>
   </main>
   <main id="game">
+    <div id="popup"></div>
     <h3>¿Que color es #<span id="color"></span>?</h3>
     <div id="colorsTable" class="colorsTable"></div>
-    <button onclick="">Reiniciar</button>
-    <button onclick="">Volver a menu</button>
+    <button onclick="game.returnToMenu()">Volver a menu</button>
   </main> 
 
   <script src="logic.js"></script>

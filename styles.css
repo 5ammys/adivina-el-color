@@ -14,7 +14,7 @@ body{
   width: 75px;
   height: 75px;
   margin: 5px;
-  
+  cursor: pointer;
 }
 .color-box:hover{
   border: 2px solid cyan;
