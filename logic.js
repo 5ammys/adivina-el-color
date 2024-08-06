@@ -89,10 +89,13 @@ class ColorGame{
       colorBox.className = "color-box";
       colorBox.style.backgroundColor = `#${color}`;
       colorBox.addEventListener('click',()=>{
+        let pop=document.getElementById('popup');
         if(color==pickedColor){
-          
+          pop.innerText='¡ADIVINASTE!';
+          pop.style.display='block';
         }else{
-          console.log("es incorrecto")
+          pop.innerText='¡INCORRECTO!';
+          pop.style.display='block';
         }
       })
       this.tableElement.appendChild(colorBox)

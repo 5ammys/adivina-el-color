@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Adivina el color</title>
-  
+
 </head>
+
 <body>
-  <h1>¡Adivina el color!</h1>
-  <main id="menu">
-    <h3>Selecciona la dificultad</h3>
-    <button id="easy" onclick="game.startGame('easy')">Fácil</button>
-    <button id="hard" onclick="game.startGame('hard')">Dificil</button>
-  </main>
-  <main id="game">
-    <div id="popup"></div>
-    <h3>¿Que color es #<span id="color"></span>?</h3>
-    <div id="colorsTable" class="colorsTable"></div>
-    <button onclick="game.returnToMenu()">Volver a menu</button>
-  </main> 
+  <div class="parent">
+    <h1>¡Adivina el color!</h1>
+    <main id="menu">
+      <h3>Selecciona la dificultad</h3>
+      <button id="easy" onclick="game.startGame('easy')">Fácil</button>
+      <button id="hard" onclick="game.startGame('hard')">Dificil</button>
+    </main>
+    <main id="game">
+      <div id="popup" class="pop"></div>
+      <h3>¿Que color es #<span id="color"></span>?</h3>
+      <div id="colorsTable" class="colorsTable"></div>
+      <button onclick="game.returnToMenu()">Volver a menu</button>
+    </main>
+  </div>
 
   <script src="logic.js"></script>
 
 </body>
+
 </html>
