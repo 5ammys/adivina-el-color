@@ -15,10 +15,15 @@
     <main id="menu">
       <h3>Selecciona la dificultad</h3>
       <button id="easy" onclick="game.startGame('easy')">Fácil</button>
-      <button id="hard" onclick="game.startGame('hard')">Dificil</button>
+      <button id="hard" onclick="game.startGame('hard')">Difícil</button>
     </main>
     <main id="game">
-      <div id="popup" class="pop"></div>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <p id="modalText" class="text"></p>
+          <div id="closeBtn" class="close" onclick="game.closeModal()">Ok</div>
+        </div>
+      </div>
       <h3>¿Que color es #<span id="color"></span>?</h3>
       <div id="colorsTable" class="colorsTable"></div>
       <button onclick="game.returnToMenu()">Volver a menu</button>
