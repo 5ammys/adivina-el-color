@@ -13,7 +13,7 @@ Selección de dificultad: fácil o difícil.
 Generación automática de colores según la dificultad.
 Verificación del color seleccionado.
 Mensajes de acierto o error mostrados en un modal.
-Opciones para reiniciar el juego o regresar al menú principal.
+Opción para regresar al menú principal.
 
 Estructura del Proyecto:
 El proyecto está compuesto principalmente por la clase ColorGame, que maneja la lógica del juego. La estructura básica del proyecto es la siguiente:
@@ -41,10 +41,10 @@ Los colores generados se muestran en la interfaz de usuario. Al hacer clic en un
 se muestra un mensaje de éxito; de lo contrario, se muestra un mensaje de error.
 
 6. Modal de Resultado:
-El modal muestra el resultado del intento del usuario (acierto o error) y permite cerrar el modal o reiniciar el juego.
+El modal muestra el resultado del intento del usuario (acierto o error) y permite cerrar el modal, y luego poder volver al menu.
 
-7. Reiniciar y Regresar al Menú:
-El usuario puede reiniciar el juego o regresar al menú principal para cambiar la dificultad.
+7. Regresar al Menú:
+El usuario puede regresar al menú principal para cambiar la dificultad.
 
 Cómo Usar:
 Clona o descarga el repositorio en tu máquina local.
@@ -52,9 +52,9 @@ Abre color-view.html en tu navegador.
 Selecciona la dificultad del juego.
 Intenta adivinar el color correcto haciendo clic en los colores mostrados.
 Observa si tu elección fue correcta a través del modal que se despliega.
-Desarrollo y Proceso
-Concepto Inicial
-El proyecto comenzó con la idea de crear un juego simple que permitiera a los usuarios practicar su capacidad para reconocer colores en formato hexadecimal. La principal motivación fue desarrollar un juego interactivo utilizando JavaScript puro, sin depender de frameworks externos.
+
+Desarrollo y Proceso:
+Concepto Inicial: El proyecto comenzó con la idea de crear un juego simple que permitiera a los usuarios practicar su capacidad para reconocer colores en formato hexadecimal. La principal motivación fue desarrollar un juego interactivo utilizando JavaScript puro, sin depender de frameworks externos.
 
 Diseño de la Interfaz:
 La interfaz fue diseñada de manera simple, con un menú para seleccionar la dificultad y un tablero de juego donde se muestran los colores. Se utilizó CSS básico para el estilo, y la interacción con el usuario se maneja mediante eventos de clic.
